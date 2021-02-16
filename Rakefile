@@ -13,8 +13,11 @@ end
 desc "start our app"
 task :start do
   app = Sightseeing.new
-  app.run
+  app.welcome
+  
 end
+
+
 
 namespace :remind_me_about do
 

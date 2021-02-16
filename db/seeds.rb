@@ -143,3 +143,6 @@ art_institute = Site.create(name: "The Art Institute of Chicago", address: "111 
 
 
 puts "🔥 🔥 🔥 🔥 "
+
+#binding.pry 
+#0
