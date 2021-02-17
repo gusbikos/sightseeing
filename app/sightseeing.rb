@@ -18,6 +18,10 @@ class Sightseeing
       end
     end
 
+    def exit_helper 
+      puts "Good Bye"
+    end
+
     def sign_up_helper 
       name = prompt.ask("What is your username?")
         while User.find_by(name: name)
@@ -32,24 +36,45 @@ class Sightseeing
 
     def login_helper 
       name = prompt.ask("What is your username?")
-      self.user = User.find_by(name: name) 
-      @delete_user = self.user
-      account_management 
+      self.user = User.find_by(name: name)
+      while User.find_by(name: name) 
+        puts "Welcome #{name}"
+        account_management 
+      end
+      puts "That username does not exist"
+
+      prompt.select("Would you like to try again?") do |menu| 
+        menu.choice "Yes", -> {sign_up_helper}
+        menu.choice "No", -> {exit_helper}
+      end
+        
+      
+      
+      #exit_helper
+      #@delete_user = self.user 
+       
     end
 
     def account_management
+      puts "Manage account"
       prompt.select("Account Management") do |menu| 
-        menu.choice "Update Username", -> {sign_up_helper}
-        menu.choice "Sites Visited", -> {login_helper}
-        menu.choice "Delete Account", -> {delete_account}
-        menu.choice "Continue", -> {main_screen}
-        menu.choice "Exit", -> {exit_helper}
+        menu.choice "Update Username", -> { sign_up_helper }
+        menu.choice "Sites Visited", -> { login_helper }
+        menu.choice "Delete Account", -> { delete_account }
+        menu.choice "Continue", -> { main_screen }
+        menu.choice "Exit", -> { leave_account_management }
+         
       end
     end
 
     def delete_account
-      binding.pry
-      users.delete
+      #binding.pry
+      #self.user = User.delete
+      #@delete_user = self.user.delete
+      #self.user.delete
+      self.user.delete
+      puts "You Account Has Been Deleted"
+      welcome
     end
 
     def main_screen 
@@ -116,15 +141,13 @@ class Sightseeing
     
     end
 
-
-
-
-
-    def exit_helper 
-      puts "Good Bye"
+    def leave_account_management 
+      puts "Goodbye"
     end
 
 
+
+    
 
       
 
