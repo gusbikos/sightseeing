@@ -49,9 +49,9 @@ class Sightseeing
       
     def new_york_hoods
       prompt.select("What neighborhood would you like to visit?") do |menu| 
-        menu.choice "Brooklyn", -> { ny_sites }
-        menu.choice "Queens", -> { ny_sites }
-        menu.choice "Manhattan", -> { ny_sites }
+        menu.choice "Brooklyn", -> { chosen_sites("Brooklyn") }
+        menu.choice "Queens", -> { chosen_sites("Queens") }
+        menu.choice "Manhattan", -> { chosen_sites("Manhattan") }
         menu.choice "Go back", -> { main_screen }
         #change these method names to all be the same
       end 
@@ -59,30 +59,29 @@ class Sightseeing
 
     def chicago_hoods 
       prompt.select("What neighborhood would you like to visit?") do |menu| 
-        menu.choice "North Side", -> { chi_sites }
-        menu.choice "West Side", -> { chi_sites }
-        menu.choice "South Side", -> { chi_sites }
-        menu.choice "The Loop", -> { chi_sites }
+        menu.choice "North Side", -> { chosen_sites("North Side") }
+        menu.choice "West Side", -> { chosen_sites("West Side") }
+        menu.choice "South Side", -> { chosen_sites("South Side") }
+        menu.choice "The Loop", -> { chosen_sites("The Loop") }
         menu.choice "Go back", -> { main_screen }
         #change these method names to all be the same
       end 
     end
 
-    def ny_sites
-      #binding.pry
-      # new_york_hoods.find_by(city_id: 1)
-      site = Site.all.select {|site| site.neighborhood.city_id == 1}
-      prompt.select("Which site would you like to visit?", site)
-    end
-    
-
-    def chi_sites 
-      site = Site.all.select {|site| site.neighborhood.city_id == 2} 
-      prompt.select("Which site would you like to visit?", site)
-    end
+def chosen_sites(neighborhood)
+      # binding.pry 
+      chosen_hood = Neighborhood.find_by(name: neighborhood)
+      chosen_site = prompt.select("What site would you like to visit?", chosen_hood.sites)
+      Visit.create(user_id: user.id, site_id: chosen_site.id, visited: true)
+      puts chosen_site.name 
+      puts chosen_site.address
+      puts chosen_site.description
 
     
-      
+    end
+
+
+
 
 
     def exit_helper 
