@@ -49,22 +49,41 @@ class Sightseeing
       
     def new_york_hoods
       prompt.select("What neighborhood would you like to visit?") do |menu| 
-        menu.choice "Brooklyn", -> { brooklyn_sites }
-        menu.choice "Queens", -> { queens_sites }
-        menu.choice "Manhattan", -> { manhattan_sites }
+        menu.choice "Brooklyn", -> { ny_sites }
+        menu.choice "Queens", -> { ny_sites }
+        menu.choice "Manhattan", -> { ny_sites }
         menu.choice "Go back", -> { main_screen }
+        #change these method names to all be the same
       end 
     end
 
     def chicago_hoods 
       prompt.select("What neighborhood would you like to visit?") do |menu| 
-        menu.choice "North Side", -> { north_side_sites }
-        menu.choice "West Side", -> { west_side_sites }
-        menu.choice "South Side", -> { south_side_sites }
-        menu.choice "The Loop", -> { loop_sites }
+        menu.choice "North Side", -> { chi_sites }
+        menu.choice "West Side", -> { chi_sites }
+        menu.choice "South Side", -> { chi_sites }
+        menu.choice "The Loop", -> { chi_sites }
         menu.choice "Go back", -> { main_screen }
+        #change these method names to all be the same
       end 
     end
+
+    def ny_sites
+      #binding.pry
+      # new_york_hoods.find_by(city_id: 1)
+      site = Site.all.select {|site| site.neighborhood.city_id == 1}
+      prompt.select("Which site would you like to visit?", site)
+    end
+    
+
+    def chi_sites 
+      site = Site.all.select {|site| site.neighborhood.city_id == 2} 
+      prompt.select("Which site would you like to visit?", site)
+    end
+
+    
+      
+
 
     def exit_helper 
       puts "Good Bye"

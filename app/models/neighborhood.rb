@@ -3,4 +3,9 @@ class Neighborhood < ActiveRecord::Base
 
   belongs_to :city 
   has_many :sites
+
+  # def self.all_sites
+  #   self.select {|site| site.city_id: 1}
+  #   binding.pry
+  # end
 end
