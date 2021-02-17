@@ -64,7 +64,7 @@ class Sightseeing
       #binding.pry
       prompt.select("Account Management") do |menu| 
         menu.choice "Update Username", -> { sign_up_helper }
-        menu.choice "Sites Visited", -> { login_helper }
+        menu.choice "Sites Visited", -> { past_visits }
         menu.choice "Delete Account", -> { delete_account }
         menu.choice "Continue", -> { main_screen }
         menu.choice "Exit", -> { exit_helper } #leave_account_management, #exit_helper
@@ -146,8 +146,11 @@ class Sightseeing
     
     end
 
-    def leave_account_management 
-      puts "Goodbye"
+    def past_visits 
+      visited_site = Visit.all.select{ |visit| visit.visited == true && self.user.id == visit.user_id}
+      # visits = Visit.all
+      visited_site
+      #binding.pry
     end
 
 
