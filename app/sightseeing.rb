@@ -10,6 +10,7 @@ class Sightseeing
     end
 
     def welcome 
+      system 'clear'
       puts "Welcome to our Sightseeing App"
       #binding.pry
       prompt.select("Main menu") do |menu| 
@@ -20,12 +21,13 @@ class Sightseeing
     end
 
     def exit_helper 
-      #binding.pry
+      system 'clear'
       puts "Good Bye"
       exit
     end
 
     def sign_up_helper 
+      system 'clear'
       name = prompt.ask("What is your username?")
         while User.find_by(name: name)
             puts "This username is already taken"
@@ -38,6 +40,7 @@ class Sightseeing
     end
 
     def login_helper 
+      system 'clear'
       name = prompt.ask("What is your username?")
       self.user = User.find_by(name: name)
      
@@ -60,6 +63,7 @@ class Sightseeing
     end
 
     def account_management
+      system 'clear'
       puts "Manage account"
       #binding.pry
       prompt.select("Account Management") do |menu| 
@@ -73,6 +77,7 @@ class Sightseeing
     end
 
     def delete_account
+      system 'clear'
       #binding.pry
       #self.user = User.delete
       #@delete_user = self.user.delete
@@ -89,17 +94,18 @@ class Sightseeing
       prompt.select("What city are you visiting?") do |menu| 
         menu.choice "New York City", -> { new_york_hoods }
         menu.choice "Chicago", -> { chicago_hoods }
+        menu.choice "Manage Account", -> { account_management }
         menu.choice "Back to Welcome Screen", -> { welcome }
       end
     end
 
     # def chosen_neighborhood(city)
-    #   @chosen_city = City.find_by(name: city)
-    #   chosen_site = prompt.select("What site would you like to visit?", chosen_hood.sites)
+    #   chosen_city = City.find_by(name: city)
+    #   #chosen_site = prompt.select("What site would you like to visit?")
     #   prompt.select("What neighborhood would you like to visit?") do |menu| 
-    #     menu.choice "Brooklyn", -> { chosen_sites("Brooklyn") }
+    #     menu.choice "Brooklyn", -> { chosen_sites("Brooklyn")  }
     #     menu.choice "Queens", -> { chosen_sites("Queens") }
-    #     menu.choice "Manhattan", -> { chosen_sites("Manhattan") }
+    #     menu.choice "Manhattan", -> { chosen_sites("Manhattan")}
     #     menu.choice "North Side", -> { chosen_sites("North Side") }
     #     menu.choice "West Side", -> { chosen_sites("West Side") }
     #     menu.choice "South Side", -> { chosen_sites("South Side") }
@@ -109,6 +115,7 @@ class Sightseeing
     # end 
       
     def new_york_hoods
+      system 'clear'
       prompt.select("What neighborhood would you like to visit?") do |menu| 
         menu.choice "Brooklyn", -> { chosen_sites("Brooklyn") }
         menu.choice "Queens", -> { chosen_sites("Queens") }
@@ -119,6 +126,7 @@ class Sightseeing
     end
 
     def chicago_hoods 
+      system 'clear'
       prompt.select("What neighborhood would you like to visit?") do |menu| 
         menu.choice "North Side", -> { chosen_sites("North Side") }
         menu.choice "West Side", -> { chosen_sites("West Side") }
@@ -130,23 +138,24 @@ class Sightseeing
     end
 
     def chosen_sites(neighborhood)
+      system 'clear'
       # binding.pry 
       chosen_hood = Neighborhood.find_by(name: neighborhood)
       chosen_site = prompt.select("What site would you like to visit?", chosen_hood.sites)
       Visit.create(user_id: user.id, site_id: chosen_site.id, visited: true)
       puts chosen_site.name 
       puts chosen_site.address
-      puts chosen_site.description
-      
+      puts chosen_site.description 
       prompt.select("\n""Where to go from here?") do |menu| 
-        # menu.choice "Go Back", -> {  }
-        menu.choice "Change City", -> { main_screen }
+        menu.choice "NYC Neighborhoods", -> { new_york_hoods  }
+        menu.choice "Chicago Neighborhoods", -> { chicago_hoods  }
         menu.choice "Log Out", -> { exit_helper }
       end
     
     end
 
     def past_visits 
+      system 'clear'
       #binding.pry
      visits = Visit.all.select{ |visit| visit.visited == true && self.user.id == visit.user_id}
       # visits = Visit.all

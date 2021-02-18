@@ -61,6 +61,7 @@ GEM
       thread_safe (~> 0.1)
     wikipedia-client (1.10.0)
     wisper (2.0.1)
+    word_wrap (1.0.0)
 
 PLATFORMS
   x86_64-darwin-19
@@ -78,6 +79,7 @@ DEPENDENCIES
   sqlite3
   tty-prompt
   wikipedia-client (~> 1.10)
+  word_wrap (~> 1.0)
 
 BUNDLED WITH
    2.2.9

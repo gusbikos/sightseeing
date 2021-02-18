@@ -88,7 +88,7 @@ art_institute = Site.create(name: "The Art Institute of Chicago", address: "111 
 #U in our CRUD
 Site.all.each do |site|
     wiki_desc = Wikipedia.find( site.name )
-    site.update(description: wiki_desc.summary)
+    site.update(description: wiki_desc.summary.wrap)
    
 end 
 
