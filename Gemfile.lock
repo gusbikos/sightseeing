@@ -14,11 +14,19 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (9.0.0)
+    asciimation (0.1.0)
+      rurses (~> 0.1.0)
     coderay (1.1.3)
     colorize (0.8.1)
     concurrent-ruby (1.1.8)
     faker (2.16.0)
       i18n (>= 1.6, < 2)
+    ffi (1.14.2)
+    ffi-locale (1.0.1)
+      ffi (>= 1.0.9)
+    ffi-ncurses (0.4.0)
+      ffi (>= 1.0.9)
+      ffi-locale (>= 1.0.0)
     i18n (1.8.9)
       concurrent-ruby (~> 1.0)
     method_source (1.0.0)
@@ -36,6 +44,8 @@ GEM
     rake (13.0.3)
     require_all (3.0.0)
     ruby2_keywords (0.0.4)
+    rurses (0.1.0)
+      ffi-ncurses (~> 0.4.0)
     sinatra (2.1.0)
       mustermann (~> 1.0)
       rack (~> 2.2)
@@ -68,6 +78,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord (~> 5.2)
   activerecord-reset-pk-sequence
+  asciimation
   colorize
   faker
   pry
