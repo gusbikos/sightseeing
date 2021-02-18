@@ -3,11 +3,11 @@
 ## Due to the COVID restrictions, the Software Engineering Cohorts of 2/1/21 for Flatiron School Chicago & New York were merged. We thought best to give our teammates from other cities a chance to take a 'virtual tour' of either respective cohort location.
 
 # For All Users To Start:
-  Installation:
->  $ git clone git@github.com:gusbikos/sightseeing.git
->  $ cd sightseeing
->  $ bundle install
->  $ rake start
+    Installation:
+   > $ git clone git@github.com:gusbikos/sightseeing.git
+   > $ cd sightseeing
+   > $ bundle install
+   > $ rake start
 
 # New Users:
     * Please navigate to 'Sign Up' to get yourself in the system!
