@@ -1,7 +1,7 @@
 class Cityscape
-
+ 
 def self.city1
-    puts "
+   puts Rainbow("
                                                                                                                                                           
                                                                                                                                                       
                                                                                                                                                       
@@ -38,20 +38,20 @@ x:.xxxx: x-x.-:.-..-:oo/-...:    -                                              
 x::..x. -xxxxxxx.x.x-x--x.xx ..x---x--x.. x.                                                                              y -.-::-x xs --x -o--s:+:://
 -xx.::::::::::::/x.xx.x.x    .-::..xx xx-.-                                                                              y -.--..  xs xx  -s::yx:/.:/
 x::.x-x         x-.-x.-x..xxxx-x/-..-.....::x                                                                             y -.-:    xs     -y++y      
-  .x         x.                                                                                                   x::::s:-::::::::s:::::/+::s::::::git 
-  .x         x.                                                                                                                                    
-  ...........-.                                                                                                                                    
- x-...........:                                                                                                                                    
--xxxxxxxxxxxxxxxxx-                                                                                                                                 
+    .x         x.                                                                                                   x::::s:-::::::::s:::::/+::s::::::git 
+    .x         x.                                                                                                                                    
+     ...........-.                                                                                                                                    
+    x-...........:                                                                                                                                    
+  -xxxxxxxxxxxxxxxxx-                                                                                                                                 
 ..-.................-..:                                                                                                                              
 
-    ".colorize(:light_black)
+    ").silver.bright
     sleep (1.5)
     system 'clear'
   end
 
 def self.city2
-    puts "
+    puts Rainbow("
                                                                                                                                                           
                                                                                                                                                       
                                                                                                                                                       
@@ -66,9 +66,9 @@ def self.city2
                                                                                                                                                       
                                                                                                                                                       
                                                                                                                                                       
-    x  xx    
-    .+  +.    
-x..                                                                                                                                          o  o
+                   x  xx    
+                  .+  +.   
+                    x..                                                                                                                      o  o
 .                   -:-                                                                                                                     .o  o-    
 .                   x:/                                                                                                                     oo::oo    
 :                    :-.x-x.x                                                                                                               o -- s    
@@ -89,19 +89,19 @@ x.xx-  ..x-.xx     ./  . -.x                                                    
 .-x ..x...x-. :xx--.--..-.-----x..xxxxx    .-:/..xx xx-x-                                                   +-x:::...  s xxx  y:/s.:--:.-o  x.xo .- :s
 .:-./--../.:- -:x -          - .. .x .x   x.x/.x.x.xxx.:-                                                   +-x:::     s      y++y.      o    xo    :y
 xxxxxxxxxxxxxxxxxx-          -xxxxxxxxxxxxxxxxxxxxxxxxxxx                                               ////o/--://////y//////y//s+//////o:--:/s////os
--          -                                                                                                                        
--........x.:                                                                                                                        
-..xxxxxxxxxxx:                                                                                                                       
--xxxxxxxxxxxxxxxxx-                                                                                                                    
--xx.xxxxxxxxxxxxxxxxx.xx:                                                                                                                 
+                  -          -                                                                                                                        
+                  -........x.:                                                                                                                        
+                 ..xxxxxxxxxxx:                                                                                                                       
+               -xxxxxxxxxxxxxxxxx-                                                                                                                    
+            -xx.xxxxxxxxxxxxxxxxx.xx:                                                                                                                 
 
-    ".colorize(:light_black)
+    ").silver.bright
     sleep (1.5)
     system 'clear'
   end
 
   def self.city3
-    puts "
+    puts Rainbow("
                                                                                                                                                           
                                                                                                                                                       
                                                                                                                                                       
@@ -144,13 +144,13 @@ lllll.llllllllllllllllllll..          :lllllllllllllllllllllllllll              
                           :...........:l                                                                                                              
                        .ll.llllllllllllll-                                                                                                            
                     ........................:                                                                                                         
-    ".colorize(:light_black)
+    ").silver.bright
     sleep (1.5)
     system 'clear'
   end
 
   def self.city4
-    puts "
+    puts Rainbow("
                                                                                                                                                           
                                                                                                                                                       
                                                                                                                                                       
@@ -194,13 +194,13 @@ lllll.llllllllllllllllllll..          :lllllllllllllllllllllllllll              
                                 .xx.xxxxxxxxxxxxxx-                                                                                                   
                              .xx.xxxxxxxxxxxxxxxxx.xx.x                                                                                               
 
-    ".colorize(:light_black)
+    ").silver.bright
     sleep (1.5)
     system 'clear'
   end
 
   def self.city5
-    puts "
+    puts Rainbow("
                                                                                                                                                           
                                                                                                                                                       
                                                                                                                                                       
@@ -244,13 +244,13 @@ l...ll..lll.lllllll.lll.l.l..l.l..lll..l.l..ll..          :l.ll.ll.llll.l.lll.l.
                                               :lllllllllll-l                                                                                          
                                            .ll.llllllllllll.l-                                                                                        
 
-    ".colorize(:light_black)
+    ").silver.bright
     sleep (1.5)
     system 'clear'
   end
 
   def self.city6
-    puts "
+    puts Rainbow("
                                                                                                                                                           
                                                                                                                                                       
                                                                                                                                                       
@@ -294,13 +294,13 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxx.x.xxxxxxxx.xx..xxx.xxxxxxxxxxx.x            
                                                                                     
                                                                                     
 
-    ".colorize(:light_black)
+    ").silver.bright
     sleep (1.5)
     system 'clear'
   end
 
   def self.city7
-    puts "
+    puts Rainbow("
                                                                                                                                                       
                                                                                                                                                       
                                                                                                                                                       
@@ -343,13 +343,13 @@ llllllllllllllllllllllllllllll.llll.l.llllllll.l...l.l..............llllllllllll
                                                                                                                                    
                                                                                                                            
                                                                                                                             
-    ".colorize(:light_red)
+    ").red.blink
     sleep (1.5)
     system 'clear'
   end
 
   def self.city8
-    puts "
+    puts Rainbow("
 
 
 
@@ -387,7 +387,7 @@ llllllllllllllllllllllllllllll.llll.l.llllllll.l...l.l..............llllllllllll
 
 
                                                                                       
-    ".colorize(:light_cyan)
+    ").blue.blink
     sleep (1.5)
     system 'clear'
   end

@@ -15,7 +15,7 @@ class Sightseeing
       prompt.select("Main menu") do |menu| 
         menu.choice "Sign up", -> {sign_up_helper}
         menu.choice "Login", -> {login_helper}
-        menu.choice "Exit", -> {exit_helper}
+        menu.choice Rainbow("Exit").red, -> {exit_helper}
       end
     end
 
@@ -61,7 +61,7 @@ class Sightseeing
         menu.choice "Sites Visited", -> { past_visits }
         menu.choice "Delete Account", -> { delete_account }
         menu.choice "Continue", -> { main_screen }
-        menu.choice "Exit", -> { exit_helper } 
+        menu.choice Rainbow("Exit").red, -> { exit_helper } 
       end
     end
 
@@ -132,7 +132,7 @@ class Sightseeing
       prompt.select("\n""Where to go from here?") do |menu| 
         menu.choice "NYC Neighborhoods", -> { new_york_hoods  }
         menu.choice "Chicago Neighborhoods", -> { chicago_hoods  }
-        menu.choice "Log Out", -> { exit_helper }
+        menu.choice Rainbow("Log Out").red, -> { exit_helper }
       end
     
     end
@@ -145,7 +145,7 @@ class Sightseeing
         end
         prompt.select("\n""Are you finished checking your list?") do |menu| 
           menu.choice "Continue", -> { main_screen }
-          menu.choice "Log Out", -> { exit_helper }
+          menu.choice Rainbow("Log Out").red, -> { exit_helper }
       end
     end
 end
