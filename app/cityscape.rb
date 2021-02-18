@@ -46,7 +46,7 @@ x::.x-x         x-.-x.-x..xxxx-x/-..-.....::x                                   
 ..-.................-..:                                                                                                                              
 
     ".colorize(:blue)
-    sleep (0.09)
+    sleep (1.5)
     system 'clear'
   end
 
@@ -96,7 +96,7 @@ xxxxxxxxxxxxxxxxxx-          -xxxxxxxxxxxxxxxxxxxxxxxxxxx                       
 -xx.xxxxxxxxxxxxxxxxx.xx:                                                                                                                 
 
     ".colorize(:blue)
-    sleep (0.09)
+    sleep (1.5)
     system 'clear'
   end
 
@@ -145,7 +145,7 @@ lllll.llllllllllllllllllll..          :lllllllllllllllllllllllllll              
                        .ll.llllllllllllll-                                                                                                            
                     ........................:                                                                                                         
     ".colorize(:blue)
-    sleep (0.09)
+    sleep (1.5)
     system 'clear'
   end
 
@@ -195,7 +195,7 @@ lllll.llllllllllllllllllll..          :lllllllllllllllllllllllllll              
                              .xx.xxxxxxxxxxxxxxxxx.xx.x                                                                                               
 
     ".colorize(:blue)
-    sleep (0.09)
+    sleep (1.5)
     system 'clear'
   end
 
@@ -245,7 +245,7 @@ l...ll..lll.lllllll.lll.l.l..l.l..lll..l.l..ll..          :l.ll.ll.llll.l.lll.l.
                                            .ll.llllllllllll.l-                                                                                        
 
     ".colorize(:blue)
-    sleep (0.09)
+    sleep (1.5)
     system 'clear'
   end
 
@@ -295,7 +295,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxx.x.xxxxxxxx.xx..xxx.xxxxxxxxxxx.x            
                                                                                     
 
     ".colorize(:blue)
-    sleep (0.09)
+    sleep (1.5)
     system 'clear'
   end
 
@@ -344,7 +344,7 @@ llllllllllllllllllllllllllllll.llll.l.llllllll.l...l.l..............llllllllllll
                                                                                                                            
                                                                                                                             
     ".colorize(:blue)
-    sleep (0.09)
+    sleep (1.5)
     system 'clear'
   end
 
@@ -358,7 +358,7 @@ llllllllllllllllllllllllllllll.llll.l.llllllll.l...l.l..............llllllllllll
                         ███████ ██  ██████  ██   ██    ██        ███████ ███████ ███████ ██ ██   ████  ██████  
                                                                                       
     ".colorize(:blue)
-    sleep (0.09)
+    sleep (1.5)
     system 'clear'
   end
 

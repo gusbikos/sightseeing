@@ -4,9 +4,12 @@ class Sightseeing
 
   attr_reader :prompt
   attr_accessor :user, :delete_user
+  
 
     def initialize
         @prompt = TTY::Prompt.new
+        Cityscape.go
+
     end
 
     def welcome 
