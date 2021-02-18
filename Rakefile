@@ -6,6 +6,7 @@ require 'colorize'
 require 'wikipedia'
 require 'word_wrap/core_ext'
 
+
 desc "Start our app console"
 task :console do
   ActiveRecord::Base.logger = Logger.new(STDOUT)
