@@ -33,6 +33,7 @@ GEM
     rack (2.2.3)
     rack-protection (2.1.0)
       rack
+    rainbow (3.0.0)
     rake (13.0.3)
     require_all (3.0.0)
     ruby2_keywords (0.0.4)
@@ -59,9 +60,12 @@ GEM
     tty-screen (0.8.1)
     tzinfo (1.2.9)
       thread_safe (~> 0.1)
+    wikipedia-client (1.10.0)
     wisper (2.0.1)
+    word_wrap (1.0.0)
 
 PLATFORMS
+  x86_64-darwin-19
   x86_64-darwin-20
 
 DEPENDENCIES
@@ -70,11 +74,14 @@ DEPENDENCIES
   colorize
   faker
   pry
+  rainbow (~> 3.0)
   rake
   require_all
   sinatra-activerecord
   sqlite3
   tty-prompt
+  wikipedia-client (~> 1.10)
+  word_wrap (~> 1.0)
 
 BUNDLED WITH
    2.2.9

@@ -1,4 +1,4 @@
-# THIS SEED FILE NEEDS TO BE ENTIRELY REPLACED -- I'M LEAVING CODE FOR YOUR REFERENCE ONLY!
+# Sightseeing Seeds
 
 City.destroy_all
 Neighborhood.destroy_all
@@ -11,13 +11,7 @@ Site.reset_pk_sequence
 User.reset_pk_sequence
 Visit.reset_pk_sequence
 
-########### different ways to write your seeds ############
-
-# 1: save everything to variables (makes it easy to connect models, best for when you want to be intentional about your seeds)
-# basil = Plant.create(name: "basil the herb", bought: 20200610, color: "green")
-# sylwia = Person.create(name: "Sylwia", free_time: "none", age: 30)
-# pp1 = PlantParenthood.create(plant_id: basil.id, person_id: sylwia.id, affection: 1_000_000, favorite?: true)
-
+#City
 new_york = City.create(name: "New York")
 chicago = City.create(name: "Chicago")
 
@@ -33,113 +27,62 @@ west_side = Neighborhood.create(name: "West Side", city_id: chicago.id)
 the_loop = Neighborhood.create(name: "The Loop", city_id: chicago.id)
 
 #NEW_YORK - MANHATTAN
-statue_of_liberty = Site.create(name: "Statue Of Liberty", address: "Liberty Island", description: "Gift From France",neighborhood_id: manhattan.id)
+statue_of_liberty = Site.create(name: "Statue Of Liberty", address: Rainbow("Liberty Island").hotpink, description: " ",neighborhood_id: manhattan.id) 
 
-msg = Site.create(name: "Madison Square Garden", address: "4 Penn Plaza", description: "The Worlds Most Famous Arena",neighborhood_id: manhattan.id)
+msg = Site.create(name: "Madison Square Garden", address: Rainbow("4 Penn Plaza").hotpink, description: "The Worlds Most Famous Arena",neighborhood_id: manhattan.id)
 
-empire_state = Site.create(name: "Empire State Building", address: "20 West 34th St", description: "Built in 1931, stands 102 stories tall, and was the worlds tallest building until 1971", neighborhood_id: manhattan.id)
+empire_state = Site.create(name: "Empire State Building", address: Rainbow("20 West 34th St").hotpink, description: "Built in 1931, stands 102 stories tall, and was the worlds tallest building until 1971", neighborhood_id: manhattan.id)
 
 #NEW_YORK - BROOKLYN
-coney_island = Site.create(name: "Coney Island", address: "Surf Avenue", description: "Amusement Park and Beach",neighborhood_id: brooklyn.id)
+coney_island = Site.create(name: "Coney Island", address: Rainbow("Surf Avenue").hotpink, description: "Amusement Park and Beach",neighborhood_id: brooklyn.id)
 
-barclays = Site.create(name: "Barclays Center", address: "620 Atlantic Avenue", description: "Home of the Brooklyn Nets",neighborhood_id: brooklyn.id)
+barclays = Site.create(name: "Barclays Center", address: Rainbow("620 Atlantic Avenue").hotpink, description: "Home of the Brooklyn Nets",neighborhood_id: brooklyn.id)
 
-prospect_park = Site.create(name: "Prospect Park Zoo", address: "450 Flatbush Avenue", description: "12 acre zoo located in Prospect Park", neighborhood_id: brooklyn.id)
+prospect_park = Site.create(name: "Prospect Park Zoo", address: Rainbow("450 Flatbush Avenue").hotpink, description: "12 acre zoo located in Prospect Park", neighborhood_id: brooklyn.id)
 
 #NEW_YORK - QUEENS
-citi_field = Site.create(name: "Citi field", address: "41 Seaver Way", description: "Home of the New York Mets",neighborhood_id: queens.id)
+citi_field = Site.create(name: "Citi field", address: Rainbow("41 Seaver Way").hotpink, description: "Home of the New York Mets",neighborhood_id: queens.id)
 
-flushing_meadows_park = Site.create(name: "Flushing Meadows Park", address: "Between Grand Central Parkway and Van Wyck Expressway", description: "Hosted the 1964 Worlds Fair",neighborhood_id: queens.id)
+flushing_meadows_park = Site.create(name: "Flushing Meadows Park", address: Rainbow("Between Grand Central Parkway and Van Wyck Expressway").hotpink, description: "Hosted the 1964 Worlds Fair",neighborhood_id: queens.id)
 
-hall_of_science = Site.create(name: "New York Hall of Science", address: "47-01 111th st", description: "Interactive Science Museum",neighborhood_id: queens.id)
+hall_of_science = Site.create(name: "New York Hall of Science", address: Rainbow("47-01 111th st").hotpink, description: "Interactive Science Museum",neighborhood_id: queens.id)
 
 
 #CHICAGO - NORTH SIDE
-wrigley_field = Site.create(name: "Wrigley Field", address: "1060 W Addison St", description: "Home of the Chicago Cubs", neighborhood_id: north_side.id)
+wrigley_field = Site.create(name: "Wrigley Field", address: Rainbow("1060 W Addison St").hotpink, description: "Home of the Chicago Cubs", neighborhood_id: north_side.id)
 
-lincoln_park_zoo = Site.create(name: "Lincoln Park Zoo", address: "2001 N Clark St", description: "Founded in 1868, one of the few admission free zoos in the United States.", neighborhood_id: north_side.id)
+lincoln_park_zoo = Site.create(name: "Lincoln Park Zoo", address: Rainbow("2001 N Clark St").hotpink, description: "Founded in 1868, one of the few admission free zoos in the United States.", neighborhood_id: north_side.id)
 
-chicago_botanic_garden = Site.create(name: "Chicago Botanic Garden", address: "1000 Lake Cook Rd", description: "385 acres of landscaped gardens displaying millions of plants & flowers in a variety of settings.", neighborhood_id: north_side.id)
+chicago_botanic_garden = Site.create(name: "Chicago Botanic Garden", address: Rainbow("1000 Lake Cook Rd").hotpink, description: "385 acres of landscaped gardens displaying millions of plants & flowers in a variety of settings.", neighborhood_id: north_side.id)
 
 #CHICAGO - SOUTH SIDE
-guaranteed_rate_field = Site.create(name: "Guaranteed Rate Field", address: "333 W 35th St", description: "Home ballpark of the Chicago White Sox", neighborhood_id: south_side.id)
+guaranteed_rate_field = Site.create(name: "Guaranteed Rate Field", address: Rainbow("333 W 35th St").hotpink, description: "Home ballpark of the Chicago White Sox", neighborhood_id: south_side.id)
 
-chinatown = Site.create(name: "Chinatown", address: "Cermak Road and Wentworth Avenue", description: "Stroll through elaborately adorned streets filled with authentic grocery stores, boutiques, souvenir shops, and family-owned restaurants.", neighborhood_id: south_side.id)
+chinatown = Site.create(name: "Chinatown", address: Rainbow("Cermak Road and Wentworth Avenue").hotpink, description: "Stroll through elaborately adorned streets filled with authentic grocery stores, boutiques, souvenir shops, and family-owned restaurants.", neighborhood_id: south_side.id)
 
-stony_island_arts_bank = Site.create(name: "Stony Island Arts Bank", address: "6760 S Stony Island Ave", description: "A space for neighborhood residents to preserve, access, reimagine and share their heritage – and a destination for artists, scholars, curators, and collectors to research and engage with South Side history.", neighborhood_id: south_side.id)
+stony_island_arts_bank = Site.create(name: "Stony Island Arts Bank", address: Rainbow("6760 S Stony Island Ave").hotpink, description: "A space for neighborhood residents to preserve, access, reimagine and share their heritage – and a destination for artists, scholars, curators, and collectors to research and engage with South Side history.", neighborhood_id: south_side.id)
 
 #CHICAGO - WEST SIDE
-garfield_park_conservatory = Site.create(name: "Garfield Park Conservatory", address: "300 N Central Park Ave", description: "One of the largest and most stunning botanical conservatories in the nation.", neighborhood_id: west_side.id)
+garfield_park_conservatory = Site.create(name: "Garfield Park Conservatory", address: Rainbow("300 N Central Park Ave").hotpink, description: "One of the largest and most stunning botanical conservatories in the nation.", neighborhood_id: west_side.id)
 
-logan_square_monument = Site.create(name: "Logan Square Monument", address: "Milwaukee Avenue and Logan Boulevard", description: "A public monument built in 1918 to celebrate the 100th anniversary of Illinois' statehood.", neighborhood_id: west_side.id)
+logan_square_monument = Site.create(name: "Logan Square Monument", address: Rainbow("Milwaukee Avenue and Logan Boulevard").hotpink, description: "A public monument built in 1918 to celebrate the 100th anniversary of Illinois' statehood.", neighborhood_id: west_side.id)
 
-humboldt_park = Site.create(name: "Humboldt Park", address: "1440 N. Humboldt Boulevard", description: "In the heart of the Humboldt Park Community, Humboldt Park totals 197.26 acres and is home to a large, historic fieldhouse.", neighborhood_id: west_side.id)
+humboldt_park = Site.create(name: "Humboldt Park", address: Rainbow("1440 N. Humboldt Boulevard").hotpink, description: "In the heart of the Humboldt Park Community, Humboldt Park totals 197.26 acres and is home to a large, historic fieldhouse.", neighborhood_id: west_side.id)
 
 #CHICAGO - THE LOOP
-willis_tower = Site.create(name: "Willis Tower", address: "233 S Wacker Dr", description: "A 108-story, 1,450-foot skyscraper in Chicago.", neighborhood_id: the_loop.id)
+willis_tower = Site.create(name: "Willis Tower", address: Rainbow("233 S Wacker Dr").hotpink, description: "A 108-story, 1,450-foot skyscraper in Chicago.", neighborhood_id: the_loop.id)
 
-field_museum = Site.create(name: "Field Museum", address: "1400 S Lake Shore Dr", description: "The Field Museum, is a natural history museum in Chicago, Illinois.", neighborhood_id: the_loop.id)
+field_museum = Site.create(name: "Field Museum", address: Rainbow("1400 S Lake Shore Dr").hotpink, description: "The Field Museum, is a natural history museum in Chicago, Illinois.", neighborhood_id: the_loop.id)
 
-art_institute = Site.create(name: "The Art Institute of Chicago", address: "111 S Michigan Ave", description: "The Art Institute of Chicago in Chicago's Grant Park, founded in 1879, is one of the oldest and largest art museums in the United States.", neighborhood_id: the_loop.id)
-
-
+art_institute = Site.create(name: "The Art Institute of Chicago", address: Rainbow("111 S Michigan Ave").hotpink, description: "The Art Institute of Chicago in Chicago's Grant Park, founded in 1879, is one of the oldest and largest art museums in the United States.", neighborhood_id: the_loop.id)
 
 
-
-
-# 2. Mass create -- in order to connect them later IN SEEDS (not through the app) you'll need to find their id
-## a. by passing an array of hashes:
-# Plant.create([
-#     {name: "Corn Tree", bought: 20170203, color: "green"},
-#     {name: "Prayer plant", bought: 20190815, color: "purple"},
-#     {name: "Cactus", bought: 20200110, color: "ugly green"}
-# ])
-# ## b. by interating over an array of hashes:
-# plants = [{name: "Elephant bush", bought: 20180908, color: "green"},
-#     {name: "Photos", bought: 20170910, color: "green"},
-#     {name: "Dragon tree", bought: 20170910, color: "green"},
-#     {name: "Snake plant", bought: 20170910, color: "dark green"},
-#     {name: "polka dot plant", bought: 20170915, color: "pink and green"},
-#     {name: "Cactus", bought: 20200517, color: "green"}]
-
-# plants.each{|hash| Plant.create(hash)}
-
-# # 3. Use Faker and mass create
-# ## step 1: write a method that creates a person
-# def create_person
-#     free = ["mornings", "evenings", "always", "afternoons", "weekends", "none"].sample
-
-#     person = Person.create(
-#         name: Faker::Movies::HitchhikersGuideToTheGalaxy.character,
-#         free_time: free,
-#         age: rand(11...70)
-#     )
-# end
-
-# ## step 2: write a method that creates a joiner
-# def create_joiners(person)
-#     plants_number = rand(1..4)
-#     plants_number.times do 
-#         PlantParenthood.create(
-#             plant_id: Plant.all.sample.id, 
-#             person_id: person.id, 
-#             affection: rand(101), 
-#             favorite?: [true, false].sample
-#         )
-#     end
-# end
-
-# ## step 3: invoke creating joiners by passing in an instance of a person
-# 10.times do     
-#     create_joiners(create_person)
-#     ##### ALTERNATIVE:
-#     # person = create_person
-#     # create_joiners(person)
-# end
-
-# indoor = Category.create(name: "indoors")
-
-# Plant.update(category_id: indoor.id)
-
+#U in our CRUD
+Site.all.each do |site|
+    wiki_desc = Wikipedia.find( site.name )
+    site.update(description: Rainbow(wiki_desc.summary.wrap).goldenrod)
+   
+end 
 
 puts "🔥 🔥 🔥 🔥 "
+

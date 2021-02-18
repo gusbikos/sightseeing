@@ -3,6 +3,9 @@ require_relative './instructions_data.rb'
 
 require 'sinatra/activerecord/rake'
 require 'colorize'
+require 'wikipedia'
+require 'word_wrap/core_ext'
+
 
 desc "Start our app console"
 task :console do
@@ -13,8 +16,11 @@ end
 desc "start our app"
 task :start do
   app = Sightseeing.new
-  app.run
+  app.welcome
+  
 end
+
+
 
 namespace :remind_me_about do
 
