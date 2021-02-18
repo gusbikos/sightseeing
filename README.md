@@ -4,10 +4,10 @@
 
 # For All Users To Start:
     Installation:
-   > $ git clone git@github.com:gusbikos/sightseeing.git
-   > $ cd sightseeing
-   > $ bundle install
-   > $ rake start
+    > $ git clone git@github.com:gusbikos/sightseeing.git
+    > $ cd sightseeing
+    > $ bundle install
+    > $ rake start
 
 # New Users:
     * Please navigate to 'Sign Up' to get yourself in the system!
