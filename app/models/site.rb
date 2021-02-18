@@ -1,5 +1,4 @@
 class Site < ActiveRecord::Base
-  # add associatons!
 
   belongs_to :neighborhood
   has_many :visits
@@ -8,8 +7,5 @@ class Site < ActiveRecord::Base
   def to_s
     self.name
   end
-
- 
-
 
 end

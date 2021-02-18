@@ -1,9 +1,8 @@
 class Sightseeing
-  # here will be your CLI!
   # it is not an AR class so you need to add attr
 
   attr_reader :prompt
-  attr_accessor :user, :delete_user
+  attr_accessor :user
 
     def initialize
         @prompt = TTY::Prompt.new
@@ -12,7 +11,6 @@ class Sightseeing
     def welcome 
       system 'clear'
       puts "Welcome to our Sightseeing App"
-      #binding.pry
       prompt.select("Main menu") do |menu| 
         menu.choice "Sign up", -> {sign_up_helper}
         menu.choice "Login", -> {login_helper}
@@ -43,45 +41,31 @@ class Sightseeing
       system 'clear'
       name = prompt.ask("What is your username?")
       self.user = User.find_by(name: name)
-     
       while User.find_by(name: name) 
-        
         puts "Welcome #{name}"
         account_management 
-        
       end
       puts "That username does not exist"
-
       prompt.select("Would you like to try again?") do |menu| 
         menu.choice "Yes", -> {sign_up_helper}
         menu.choice "No", -> {exit_helper}
-        #exit_helper
       end
-      #exit_helper
-      #@delete_user = self.user 
-       
     end
 
     def account_management
       system 'clear'
       puts "Manage account"
-      #binding.pry
       prompt.select("Account Management") do |menu| 
         menu.choice "Update Username", -> { sign_up_helper }
         menu.choice "Sites Visited", -> { past_visits }
         menu.choice "Delete Account", -> { delete_account }
         menu.choice "Continue", -> { main_screen }
-        menu.choice "Exit", -> { exit_helper } #leave_account_management, #exit_helper
-         
+        menu.choice "Exit", -> { exit_helper } 
       end
     end
 
     def delete_account
       system 'clear'
-      #binding.pry
-      #self.user = User.delete
-      #@delete_user = self.user.delete
-      #self.user.delete
       self.user.delete
       puts "You Account Has Been Deleted"
       welcome
@@ -99,6 +83,7 @@ class Sightseeing
       end
     end
 
+    #---Reach goal for a later time to simplify navigation back to neighborhoods---
     # def chosen_neighborhood(city)
     #   chosen_city = City.find_by(name: city)
     #   #chosen_site = prompt.select("What site would you like to visit?")
@@ -121,7 +106,6 @@ class Sightseeing
         menu.choice "Queens", -> { chosen_sites("Queens") }
         menu.choice "Manhattan", -> { chosen_sites("Manhattan") }
         menu.choice "Go back", -> { main_screen }
-        #change these method names to all be the same
       end 
     end
 
@@ -133,13 +117,11 @@ class Sightseeing
         menu.choice "South Side", -> { chosen_sites("South Side") }
         menu.choice "The Loop", -> { chosen_sites("The Loop") }
         menu.choice "Go back", -> { main_screen }
-        #change these method names to all be the same
       end 
     end
 
     def chosen_sites(neighborhood)
       system 'clear'
-      # binding.pry 
       chosen_hood = Neighborhood.find_by(name: neighborhood)
       chosen_site = prompt.select("What site would you like to visit?", chosen_hood.sites)
       Visit.create(user_id: user.id, site_id: chosen_site.id, visited: true)
@@ -156,38 +138,13 @@ class Sightseeing
 
     def past_visits 
       system 'clear'
-      #binding.pry
-     visits = Visit.all.select{ |visit| visit.visited == true && self.user.id == visit.user_id}
-      # visits = Visit.all
+      visits = Visit.all.select{ |visit| visit.visited == true && self.user.id == visit.user_id}
       visits.each do |visit|
-        #binding.pry 
         puts "#{visit.site.name}"
-        
         end
         prompt.select("\n""Are you finished checking your list?") do |menu| 
-          # menu.choice "Go Back", -> {  }
           menu.choice "Continue", -> { main_screen }
           menu.choice "Log Out", -> { exit_helper }
       end
-      
     end
-
-
-
-    
-
-      
-
-
-
-
-
-
-
-
-  
-
-  private
-
-  
 end
