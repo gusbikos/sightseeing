@@ -6,6 +6,7 @@ class Sightseeing
 
     def initialize
         @prompt = TTY::Prompt.new
+        Cityscape.go
     end
 
     def welcome 
