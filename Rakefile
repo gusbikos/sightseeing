@@ -3,6 +3,7 @@ require_relative './instructions_data.rb'
 
 require 'sinatra/activerecord/rake'
 require 'colorize'
+require 'wikipedia'
 
 desc "Start our app console"
 task :console do

@@ -147,10 +147,20 @@ class Sightseeing
     end
 
     def past_visits 
-      visited_site = Visit.all.select{ |visit| visit.visited == true && self.user.id == visit.user_id}
-      # visits = Visit.all
-      visited_site
       #binding.pry
+     visits = Visit.all.select{ |visit| visit.visited == true && self.user.id == visit.user_id}
+      # visits = Visit.all
+      visits.each do |visit|
+        #binding.pry 
+        puts "#{visit.site.name}"
+        
+        end
+        prompt.select("\n""Are you finished checking your list?") do |menu| 
+          # menu.choice "Go Back", -> {  }
+          menu.choice "Continue", -> { main_screen }
+          menu.choice "Log Out", -> { exit_helper }
+      end
+      
     end
 
 

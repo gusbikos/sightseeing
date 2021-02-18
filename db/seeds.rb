@@ -32,8 +32,10 @@ south_side = Neighborhood.create(name: "South Side", city_id: chicago.id)
 west_side = Neighborhood.create(name: "West Side", city_id: chicago.id)
 the_loop = Neighborhood.create(name: "The Loop", city_id: chicago.id)
 
+#page = Wikipedia.find( 'Statue of Liberty' )
+
 #NEW_YORK - MANHATTAN
-statue_of_liberty = Site.create(name: "Statue Of Liberty", address: "Liberty Island", description: "Gift From France",neighborhood_id: manhattan.id)
+statue_of_liberty = Site.create(name: "Statue Of Liberty", address: "Liberty Island", description: " ",neighborhood_id: manhattan.id) 
 
 msg = Site.create(name: "Madison Square Garden", address: "4 Penn Plaza", description: "The Worlds Most Famous Arena",neighborhood_id: manhattan.id)
 
@@ -83,8 +85,12 @@ field_museum = Site.create(name: "Field Museum", address: "1400 S Lake Shore Dr"
 art_institute = Site.create(name: "The Art Institute of Chicago", address: "111 S Michigan Ave", description: "The Art Institute of Chicago in Chicago's Grant Park, founded in 1879, is one of the oldest and largest art museums in the United States.", neighborhood_id: the_loop.id)
 
 
-
-
+#U in our CRUD
+Site.all.each do |site|
+    wiki_desc = Wikipedia.find( site.name )
+    site.update(description: wiki_desc.summary)
+   
+end 
 
 
 # 2. Mass create -- in order to connect them later IN SEEDS (not through the app) you'll need to find their id

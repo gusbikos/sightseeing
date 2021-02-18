@@ -13,3 +13,4 @@ gem "faker"
 
 gem "colorize"
 gem "tty-prompt"
+gem 'wikipedia-client', '~> 1.10'
