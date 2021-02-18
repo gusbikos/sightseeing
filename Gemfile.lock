@@ -59,9 +59,12 @@ GEM
     tty-screen (0.8.1)
     tzinfo (1.2.9)
       thread_safe (~> 0.1)
+    wikipedia-client (1.10.0)
     wisper (2.0.1)
+    word_wrap (1.0.0)
 
 PLATFORMS
+  x86_64-darwin-19
   x86_64-darwin-20
 
 DEPENDENCIES
@@ -75,6 +78,8 @@ DEPENDENCIES
   sinatra-activerecord
   sqlite3
   tty-prompt
+  wikipedia-client (~> 1.10)
+  word_wrap (~> 1.0)
 
 BUNDLED WITH
    2.2.9
