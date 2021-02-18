@@ -58,7 +58,7 @@ chicago_botanic_garden = Site.create(name: "Chicago Botanic Garden", address: Ra
 #CHICAGO - SOUTH SIDE
 guaranteed_rate_field = Site.create(name: "Guaranteed Rate Field", address: Rainbow("333 W 35th St").hotpink, description: "Home ballpark of the Chicago White Sox", neighborhood_id: south_side.id)
 
-chinatown = Site.create(name: "Chinatown", address: Rainbow("Cermak Road and Wentworth Avenue").hotpink, description: "Stroll through elaborately adorned streets filled with authentic grocery stores, boutiques, souvenir shops, and family-owned restaurants.", neighborhood_id: south_side.id)
+chinatown = Site.create(name: "Chinatown (Chicago)", address: Rainbow("Cermak Road and Wentworth Avenue").hotpink, description: "Stroll through elaborately adorned streets filled with authentic grocery stores, boutiques, souvenir shops, and family-owned restaurants.", neighborhood_id: south_side.id)
 
 stony_island_arts_bank = Site.create(name: "Stony Island Arts Bank", address: Rainbow("6760 S Stony Island Ave").hotpink, description: "A space for neighborhood residents to preserve, access, reimagine and share their heritage – and a destination for artists, scholars, curators, and collectors to research and engage with South Side history.", neighborhood_id: south_side.id)
 
@@ -67,7 +67,7 @@ garfield_park_conservatory = Site.create(name: "Garfield Park Conservatory", add
 
 logan_square_monument = Site.create(name: "Logan Square Monument", address: Rainbow("Milwaukee Avenue and Logan Boulevard").hotpink, description: "A public monument built in 1918 to celebrate the 100th anniversary of Illinois' statehood.", neighborhood_id: west_side.id)
 
-humboldt_park = Site.create(name: "Humboldt Park", address: Rainbow("1440 N. Humboldt Boulevard").hotpink, description: "In the heart of the Humboldt Park Community, Humboldt Park totals 197.26 acres and is home to a large, historic fieldhouse.", neighborhood_id: west_side.id)
+humboldt_park = Site.create(name: "Humboldt Park (Chicago park)", address: Rainbow("1440 N. Humboldt Boulevard").hotpink, description: "In the heart of the Humboldt Park Community, Humboldt Park totals 197.26 acres and is home to a large, historic fieldhouse.", neighborhood_id: west_side.id)
 
 #CHICAGO - THE LOOP
 willis_tower = Site.create(name: "Willis Tower", address: Rainbow("233 S Wacker Dr").hotpink, description: "A 108-story, 1,450-foot skyscraper in Chicago.", neighborhood_id: the_loop.id)
