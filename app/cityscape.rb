@@ -45,7 +45,7 @@ x::.x-x         x-.-x.-x..xxxx-x/-..-.....::x                                   
 -xxxxxxxxxxxxxxxxx-                                                                                                                                 
 ..-.................-..:                                                                                                                              
 
-    ".colorize(:blue)
+    ".colorize(:light_black)
     sleep (1.5)
     system 'clear'
   end
@@ -95,7 +95,7 @@ xxxxxxxxxxxxxxxxxx-          -xxxxxxxxxxxxxxxxxxxxxxxxxxx                       
 -xxxxxxxxxxxxxxxxx-                                                                                                                    
 -xx.xxxxxxxxxxxxxxxxx.xx:                                                                                                                 
 
-    ".colorize(:blue)
+    ".colorize(:light_black)
     sleep (1.5)
     system 'clear'
   end
@@ -144,7 +144,7 @@ lllll.llllllllllllllllllll..          :lllllllllllllllllllllllllll              
                           :...........:l                                                                                                              
                        .ll.llllllllllllll-                                                                                                            
                     ........................:                                                                                                         
-    ".colorize(:blue)
+    ".colorize(:light_black)
     sleep (1.5)
     system 'clear'
   end
@@ -194,7 +194,7 @@ lllll.llllllllllllllllllll..          :lllllllllllllllllllllllllll              
                                 .xx.xxxxxxxxxxxxxx-                                                                                                   
                              .xx.xxxxxxxxxxxxxxxxx.xx.x                                                                                               
 
-    ".colorize(:blue)
+    ".colorize(:light_black)
     sleep (1.5)
     system 'clear'
   end
@@ -244,7 +244,7 @@ l...ll..lll.lllllll.lll.l.l..l.l..lll..l.l..ll..          :l.ll.ll.llll.l.lll.l.
                                               :lllllllllll-l                                                                                          
                                            .ll.llllllllllll.l-                                                                                        
 
-    ".colorize(:blue)
+    ".colorize(:light_black)
     sleep (1.5)
     system 'clear'
   end
@@ -294,7 +294,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxx.x.xxxxxxxx.xx..xxx.xxxxxxxxxxx.x            
                                                                                     
                                                                                     
 
-    ".colorize(:blue)
+    ".colorize(:light_black)
     sleep (1.5)
     system 'clear'
   end
@@ -343,21 +343,51 @@ llllllllllllllllllllllllllllll.llll.l.llllllll.l...l.l..............llllllllllll
                                                                                                                                    
                                                                                                                            
                                                                                                                             
-    ".colorize(:blue)
+    ".colorize(:light_red)
     sleep (1.5)
     system 'clear'
   end
 
   def self.city8
     puts "
+
+
+
+
+
+
+
+
+
+
+
+
     
-                        ███████ ██  ██████  ██   ██ ████████     ███████ ███████ ███████ ██ ███    ██  ██████  
-                        ██      ██ ██       ██   ██    ██        ██      ██      ██      ██ ████   ██ ██       
-                        ███████ ██ ██   ███ ███████    ██        ███████ █████   █████   ██ ██ ██  ██ ██   ███ 
-                             ██ ██ ██    ██ ██   ██    ██             ██ ██      ██      ██ ██  ██ ██ ██    ██ 
-                        ███████ ██  ██████  ██   ██    ██        ███████ ███████ ███████ ██ ██   ████  ██████  
+                                    ███████ ██  ██████  ██   ██ ████████     ███████ ███████ ███████ ██ ███    ██  ██████  
+                                    ██      ██ ██       ██   ██    ██        ██      ██      ██      ██ ████   ██ ██       
+                                    ███████ ██ ██   ███ ███████    ██        ███████ █████   █████   ██ ██ ██  ██ ██   ███ 
+                                         ██ ██ ██    ██ ██   ██    ██             ██ ██      ██      ██ ██  ██ ██ ██    ██ 
+                                    ███████ ██  ██████  ██   ██    ██        ███████ ███████ ███████ ██ ██   ████  ██████  
+
+                                               An Application by Alex Ricardel, Gus Bikos, and Doug Kerzner 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                                                                       
-    ".colorize(:blue)
+    ".colorize(:light_cyan)
     sleep (1.5)
     system 'clear'
   end
@@ -379,7 +409,6 @@ llllllllllllllllllllllllllllll.llll.l.llllllll.l...l.l..............llllllllllll
   def self.go
     system 'clear'
     self.animation
-    puts "x"
   end
 
 end
