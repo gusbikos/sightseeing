@@ -27,4 +27,4 @@
   * TTY::Prompt - the main tool used for us to handle communication and input with the user
 
 # License
-MIT (https://github.com/gusbikos/sightseeing/blob/main/licence.txt)
+[MIT](https://github.com/gusbikos/sightseeing/blob/main/licence.txt)
