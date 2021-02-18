@@ -343,7 +343,7 @@ llllllllllllllllllllllllllllll.llll.l.llllllll.l...l.l..............llllllllllll
                                                                                                                                    
                                                                                                                            
                                                                                                                             
-    ").red.blink
+    ").orangered.bright
     sleep (1.5)
     system 'clear'
   end
@@ -387,7 +387,7 @@ llllllllllllllllllllllllllllll.llll.l.llllllll.l...l.l..............llllllllllll
 
 
                                                                                       
-    ").blue.blink
+    ").blue.bright
     sleep (1.5)
     system 'clear'
   end
